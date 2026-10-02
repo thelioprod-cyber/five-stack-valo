@@ -1,0 +1,1858 @@
+/* =========================================================
+   FIVE STACK VALO — STYLE COMPLET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #1b1b26 0%,
+            #0c0c12 45%,
+            #050507 100%
+        );
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    padding: 55px 35px 25px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.small-title {
+    color: #ff4655;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(35px, 5vw, 70px);
+    letter-spacing: -3px;
+}
+
+.subtitle {
+    color: #777782;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ÉQUIPE
+========================================================= */
+
+.team {
+    max-width: 1450px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+
+/* =========================================================
+   CARTES
+========================================================= */
+
+.player {
+    height: 470px;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #282832;
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #181820 0%,
+            #0e0e14 100%
+        );
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.player:hover {
+    transform: translateY(-12px);
+
+    border-color: #ff4655;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   COULEUR DE CHAQUE AGENT
+========================================================= */
+
+.clove {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #45264d 0%,
+            transparent 55%
+        ),
+        #101015;
+}
+
+.sage {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #1e5a56 0%,
+            transparent 55%
+        ),
+        #101015;
+}
+
+.jett {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #28566d 0%,
+            transparent 55%
+        ),
+        #101015;
+}
+
+.harbor {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #1d4d68 0%,
+            transparent 55%
+        ),
+        #101015;
+}
+
+.reyna {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #5a205c 0%,
+            transparent 55%
+        ),
+        #101015;
+}
+
+
+/* =========================================================
+   OMBRE BAS DES CARTES
+========================================================= */
+
+.player::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 30%,
+            rgba(0, 0, 0, 0.15) 55%,
+            rgba(0, 0, 0, 0.95) 100%
+        );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   NUMÉROS
+========================================================= */
+
+.number {
+    position: absolute;
+
+    top: 18px;
+    left: 20px;
+
+    color: rgba(255, 255, 255, 0.15);
+
+    font-size: 45px;
+    font-weight: 900;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   IMAGE AGENT
+========================================================= */
+
+.agent {
+    position: absolute;
+
+    width: 115%;
+    height: 90%;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    object-fit: contain;
+
+    z-index: 1;
+
+    filter:
+        drop-shadow(
+            0 15px 20px rgba(0, 0, 0, 0.6)
+        );
+
+    transition: 0.35s ease;
+}
+
+.player:hover .agent {
+    transform:
+        translateX(-50%)
+        scale(1.08);
+}
+
+
+/* =========================================================
+   INFOS JOUEUR
+========================================================= */
+
+.player-info {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 25px;
+    left: 22px;
+    right: 15px;
+}
+
+.player-info span {
+    color: #ff4655;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.player-info h2 {
+    font-size: 25px;
+    margin-top: 5px;
+
+    overflow-wrap: anywhere;
+}
+
+.player-info p {
+    color: #777782;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+
+    transition: 0.2s;
+}
+
+.player:hover .player-info p {
+    color: white;
+}
+
+
+/* =========================================================
+   YUUJI — MVP
+========================================================= */
+
+.goat {
+    border: 1px solid #caa846;
+
+    transform: translateY(-15px);
+}
+
+.goat:hover {
+    transform:
+        translateY(-25px)
+        scale(1.02);
+
+    border-color: #ffd65a;
+
+    box-shadow:
+        0 20px 60px rgba(255, 210, 70, 0.18);
+}
+
+.mvp {
+    position: absolute;
+
+    z-index: 6;
+
+    top: 18px;
+    right: 18px;
+
+    color: #ffd65a;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
+    color: #45454f;
+
+    font-size: 11px;
+
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   ANIMATION CARTE CLOVE
+========================================================= */
+
+.player.clove::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 330px;
+
+    left: 50%;
+    top: 35px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 70%,
+            rgba(185, 60, 255, 0.65),
+            rgba(110, 20, 180, 0.25) 45%,
+            transparent 72%
+        );
+
+    filter: blur(22px);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    animation:
+        cloveEnergy 3s ease-in-out infinite;
+}
+
+@keyframes cloveEnergy {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(0.9);
+
+        opacity: 0.25;
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(1.15);
+
+        opacity: 0.7;
+    }
+}
+
+.player.clove:hover::after {
+    animation:
+        clovePower 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes clovePower {
+
+    from {
+        transform:
+            translateX(-50%)
+            scale(1);
+
+        opacity: 0.55;
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            scale(1.35);
+
+        opacity: 1;
+    }
+}
+
+.player.clove:hover .agent {
+    filter:
+        drop-shadow(
+            0 0 8px rgba(200, 80, 255, 0.8)
+        )
+        drop-shadow(
+            0 0 25px rgba(130, 30, 255, 0.6)
+        )
+        brightness(1.15);
+
+    transform:
+        translateX(-50%)
+        scale(1.10)
+        rotate(-1deg);
+}
+
+
+/* =========================================================
+   ANIMATION CARTE SAGE
+========================================================= */
+
+.player.sage::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: 90px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(80, 255, 220, 0.7) 0%,
+            rgba(40, 190, 170, 0.25) 40%,
+            transparent 70%
+        );
+
+    filter: blur(16px);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    animation:
+        sageFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes sageFloat {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            translateY(10px)
+            scale(0.9);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            translateY(-20px)
+            scale(1.15);
+
+        opacity: 0.75;
+    }
+}
+
+.player.sage:hover .agent {
+    transform:
+        translateX(-50%)
+        translateY(-7px)
+        scale(1.10);
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(80, 255, 220, 0.9)
+        )
+        drop-shadow(
+            0 0 25px rgba(40, 210, 180, 0.55)
+        )
+        brightness(1.12);
+}
+
+
+/* =========================================================
+   ANIMATION CARTE JETT
+========================================================= */
+
+.player.jett::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    top: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(110, 220, 255, 0.65),
+            rgba(40, 140, 220, 0.20) 45%,
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    animation:
+        jettCardWind 2.2s ease-in-out infinite;
+}
+
+@keyframes jettCardWind {
+
+    0%,
+    100% {
+        transform:
+            translateX(-55%)
+            translateY(5px)
+            scale(0.9);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform:
+            translateX(-45%)
+            translateY(-10px)
+            scale(1.2);
+
+        opacity: 0.75;
+    }
+}
+
+.player.jett:hover .agent {
+    transform:
+        translateX(-50%)
+        translateY(-12px)
+        scale(1.13)
+        rotate(-1deg);
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(120, 225, 255, 0.9)
+        )
+        drop-shadow(
+            0 0 30px rgba(40, 160, 255, 0.7)
+        )
+        brightness(1.18);
+}
+
+
+/* =========================================================
+   ANIMATION CARTE HARBOR
+========================================================= */
+
+.player.harbor::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 170px;
+
+    left: 50%;
+    bottom: 70px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(40, 190, 255, 0.75),
+            rgba(20, 110, 220, 0.30) 45%,
+            transparent 72%
+        );
+
+    filter: blur(18px);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    animation:
+        harborCardWave 3s ease-in-out infinite;
+}
+
+@keyframes harborCardWave {
+
+    0%,
+    100% {
+        transform:
+            translateX(-55%)
+            translateY(10px)
+            rotate(-3deg)
+            scaleX(0.9);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform:
+            translateX(-45%)
+            translateY(-15px)
+            rotate(3deg)
+            scaleX(1.25);
+
+        opacity: 0.75;
+    }
+}
+
+.player.harbor:hover .agent {
+    transform:
+        translateX(-50%)
+        translateY(-8px)
+        scale(1.10);
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(50, 200, 255, 0.9)
+        )
+        drop-shadow(
+            0 0 30px rgba(20, 120, 255, 0.65)
+        )
+        brightness(1.15);
+}
+
+
+/* =========================================================
+   ANIMATION CARTE REYNA
+========================================================= */
+
+.player.reyna::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 300px;
+
+    left: 50%;
+    top: 45px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 50, 220, 0.75),
+            rgba(150, 20, 220, 0.35) 40%,
+            transparent 72%
+        );
+
+    filter: blur(22px);
+
+    opacity: 0.35;
+
+    z-index: 0;
+
+    animation:
+        reynaSoul 2.3s ease-in-out infinite;
+}
+
+@keyframes reynaSoul {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(0.85);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(1.20);
+
+        opacity: 0.8;
+    }
+}
+
+.player.reyna:hover .agent {
+    transform:
+        translateX(-50%)
+        translateY(-7px)
+        scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(255, 60, 220, 0.95)
+        )
+        drop-shadow(
+            0 0 30px rgba(170, 30, 255, 0.75)
+        )
+        brightness(1.18);
+}
+
+
+/* =========================================================
+   PAGES PROFILS
+========================================================= */
+
+.profile-page {
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            #32123e 0%,
+            transparent 35%
+        ),
+        #07070b;
+}
+
+.back-button {
+    position: fixed;
+
+    top: 30px;
+    left: 40px;
+
+    z-index: 20;
+
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    color: white;
+}
+
+.profile-container {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        55% 45%;
+
+    align-items: center;
+
+    max-width: 1500px;
+
+    margin: auto;
+}
+
+.profile-stats {
+    padding:
+        90px 40px 50px 80px;
+
+    z-index: 5;
+}
+
+.profile-agent {
+    color: #ff4655;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.profile-title {
+    font-size: 75px;
+
+    margin:
+        5px 0 35px;
+
+    letter-spacing: -4px;
+}
+
+.stat-card {
+    max-width: 600px;
+
+    padding: 15px 20px;
+
+    margin-bottom: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border-left:
+        2px solid #ff4655;
+
+    border-radius: 4px;
+
+    transition: 0.2s;
+}
+
+.stat-card:hover {
+    transform:
+        translateX(8px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+.stat-card span {
+    color: #777;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.stat-card h2 {
+    font-size: 20px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   IMAGE AGENT PAGE PROFIL
+========================================================= */
+
+.profile-agent-image {
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile-agent-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(190, 60, 255, 0.35),
+            transparent 65%
+        );
+
+    filter: blur(30px);
+}
+
+.profile-agent-image img {
+    position: relative;
+
+    z-index: 2;
+
+    max-height: 92vh;
+    max-width: 115%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 35px
+            rgba(0, 0, 0, 0.7)
+        )
+        drop-shadow(
+            0 0 25px
+            rgba(170, 50, 255, 0.25)
+        );
+}
+
+
+/* =========================================================
+   TRANSITION CLOVE
+========================================================= */
+
+#clove-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    background: rgba(20, 0, 30, 0);
+}
+
+#clove-transition.active {
+    opacity: 1;
+
+    animation:
+        cloveDarkScreen 1s forwards;
+}
+
+.clove-smoke {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(190, 70, 255, 0.9),
+            rgba(100, 20, 160, 0.6) 40%,
+            transparent 70%
+        );
+
+    filter: blur(45px);
+
+    transform: scale(0);
+}
+
+.smoke-1 {
+    left: -100px;
+    bottom: -200px;
+}
+
+.smoke-2 {
+    right: -100px;
+    top: -200px;
+}
+
+.smoke-3 {
+    left: 40%;
+    top: 30%;
+}
+
+#clove-transition.active .clove-smoke {
+    animation:
+        cloveSmokeAttack 1s forwards;
+}
+
+@keyframes cloveSmokeAttack {
+
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(5);
+        opacity: 1;
+    }
+}
+
+@keyframes cloveDarkScreen {
+
+    from {
+        background:
+            rgba(20, 0, 30, 0);
+    }
+
+    to {
+        background:
+            #12051c;
+    }
+}
+
+
+/* =========================================================
+   TRANSITION SAGE
+========================================================= */
+
+#sage-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        rgba(0, 30, 30, 0);
+}
+
+#sage-transition.active {
+    opacity: 1;
+
+    animation:
+        sageFlash 1s forwards;
+}
+
+.sage-orb {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            white 0%,
+            #8ffff0 20%,
+            #31d6bd 50%,
+            transparent 72%
+        );
+
+    box-shadow:
+        0 0 30px #72ffe8,
+        0 0 80px #28c9b2;
+
+    transform: scale(0);
+}
+
+#sage-transition.active .sage-orb {
+    animation:
+        sageOrbAttack 1s forwards;
+}
+
+@keyframes sageOrbAttack {
+
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    55% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(25);
+        opacity: 1;
+    }
+}
+
+@keyframes sageFlash {
+
+    0%,
+    60% {
+        background:
+            rgba(0, 30, 30, 0);
+    }
+
+    100% {
+        background:
+            #d5fff8;
+    }
+}
+
+
+/* =========================================================
+   TRANSITION JETT
+========================================================= */
+
+#jett-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        rgba(5, 15, 25, 0);
+}
+
+#jett-transition.active {
+    opacity: 1;
+
+    animation:
+        jettBackground 0.9s forwards;
+}
+
+.wind {
+    position: absolute;
+
+    left: -120%;
+
+    width: 120%;
+    height: 8px;
+
+    border-radius: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(150, 235, 255, 0.9),
+            white,
+            transparent
+        );
+
+    filter:
+        blur(2px)
+        drop-shadow(
+            0 0 12px #62dfff
+        );
+
+    transform:
+        skewX(-25deg);
+}
+
+.wind-1 {
+    top: 15%;
+}
+
+.wind-2 {
+    top: 32%;
+    animation-delay: 0.08s !important;
+}
+
+.wind-3 {
+    top: 50%;
+    animation-delay: 0.16s !important;
+}
+
+.wind-4 {
+    top: 68%;
+    animation-delay: 0.24s !important;
+}
+
+.wind-5 {
+    top: 84%;
+    animation-delay: 0.32s !important;
+}
+
+#jett-transition.active .wind {
+    animation:
+        jettWindAttack 0.65s ease-in forwards;
+}
+
+@keyframes jettWindAttack {
+
+    0% {
+        left: -120%;
+
+        transform:
+            skewX(-25deg)
+            scaleX(0.5);
+    }
+
+    100% {
+        left: 120%;
+
+        transform:
+            skewX(-25deg)
+            scaleX(2);
+    }
+}
+
+@keyframes jettBackground {
+
+    0% {
+        background:
+            rgba(5, 15, 25, 0);
+    }
+
+    60% {
+        background:
+            rgba(80, 200, 255, 0.15);
+    }
+
+    100% {
+        background:
+            #07121b;
+    }
+}
+
+
+/* =========================================================
+   TRANSITION HARBOR
+========================================================= */
+
+#harbor-transition {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+#harbor-transition.active {
+    opacity: 1;
+}
+
+.wave {
+    position: absolute;
+
+    width: 160%;
+    height: 140%;
+
+    left: -30%;
+    bottom: -150%;
+
+    border-radius:
+        45% 55% 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(100, 230, 255, 0.95),
+            rgba(20, 130, 220, 0.98) 35%,
+            #062c55 100%
+        );
+
+    box-shadow:
+        0 -20px 40px
+        rgba(100, 230, 255, 0.7);
+
+    transform:
+        rotate(-5deg);
+}
+
+#harbor-transition.active .wave-1 {
+    animation:
+        harborWaveAttack 0.9s ease-in forwards;
+}
+
+.wave-2 {
+    opacity: 0.55;
+
+    transform:
+        rotate(8deg);
+}
+
+#harbor-transition.active .wave-2 {
+    animation:
+        harborWaveAttack2 0.9s 0.12s ease-in forwards;
+}
+
+@keyframes harborWaveAttack {
+
+    from {
+        bottom: -150%;
+    }
+
+    to {
+        bottom: 0;
+
+        transform:
+            scale(1.5);
+    }
+}
+
+@keyframes harborWaveAttack2 {
+
+    from {
+        bottom: -160%;
+    }
+
+    to {
+        bottom: 0;
+
+        transform:
+            scale(1.6);
+    }
+}
+
+
+/* =========================================================
+   TRANSITION REYNA
+========================================================= */
+
+#reyna-transition {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        rgba(30, 0, 40, 0);
+}
+
+#reyna-transition.active {
+    opacity: 1;
+
+    animation:
+        reynaScreenAttack 1s forwards;
+}
+
+.reyna-eye {
+    position: relative;
+
+    width: 130px;
+    height: 75px;
+
+    border-radius:
+        70% 10% 70% 10%;
+
+    transform:
+        rotate(45deg)
+        scale(0);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5ce1,
+            #8c25ff
+        );
+
+    box-shadow:
+        0 0 30px #ff38d1,
+        0 0 80px #8c25ff;
+}
+
+.reyna-pupil {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    top: 50%;
+    left: 50%;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+
+    background: white;
+
+    box-shadow:
+        0 0 20px white;
+}
+
+#reyna-transition.active .reyna-eye {
+    animation:
+        reynaEyeAttack 1s forwards;
+}
+
+@keyframes reynaEyeAttack {
+
+    0% {
+        transform:
+            rotate(45deg)
+            scale(0);
+
+        opacity: 0;
+    }
+
+    25% {
+        transform:
+            rotate(45deg)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    55% {
+        transform:
+            rotate(45deg)
+            scale(0.85);
+    }
+
+    100% {
+        transform:
+            rotate(45deg)
+            scale(18);
+
+        opacity: 1;
+    }
+}
+
+@keyframes reynaScreenAttack {
+
+    0% {
+        background:
+            transparent;
+    }
+
+    65% {
+        background:
+            rgba(150, 20, 180, 0.2);
+    }
+
+    100% {
+        background:
+            #16001d;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .team {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .goat {
+        transform: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .profile-page {
+        overflow: auto;
+    }
+
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats {
+        padding:
+            100px 25px 20px;
+    }
+
+    .profile-title {
+        font-size: 55px;
+    }
+
+    .profile-agent-image {
+        height: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .team {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   TRACKER JOUEUR
+========================================================= */
+
+.tracker-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(150, 40, 220, .15),
+            transparent 35%
+        ),
+        #07070b;
+
+    color: white;
+
+    padding: 80px 8%;
+}
+
+.tracker-back {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.tracker-back:hover {
+    color: white;
+}
+
+.tracker-container {
+    max-width: 1200px;
+
+    margin:
+        70px auto 0;
+}
+
+
+/* =========================================================
+   TRACKER HEADER
+========================================================= */
+
+.tracker-header {
+    position: relative;
+}
+
+.tracker-label {
+    color: #ff4655;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.tracker-header h1 {
+    font-size: 70px;
+
+    margin-top: 5px;
+}
+
+.riot-id {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   PERSONNAGE TRACKER
+========================================================= */
+
+.tracker-agent {
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: 20px;
+    top: -80px;
+
+    object-fit: contain;
+    object-position: center;
+
+    filter:
+        drop-shadow(
+            0 0 20px rgba(170, 50, 255, .45)
+        )
+        drop-shadow(
+            0 15px 25px rgba(0, 0, 0, .7)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RANG TRACKER
+========================================================= */
+
+.tracker-rank {
+    margin-top: 40px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.tracker-rank div {
+    background: #111116;
+
+    border-left:
+        3px solid #ff4655;
+
+    padding:
+        20px 30px;
+
+    min-width: 220px;
+}
+
+
+/* LABELS RANG */
+
+.tracker-rank div > span {
+    display: block;
+
+    color: #777782;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* CHIFFRES RANG */
+
+.tracker-rank h2,
+.tracker-rank h2 span {
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   STATS TRACKER
+========================================================= */
+
+.tracker-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.tracker-stat {
+    background: #111116;
+
+    border:
+        1px solid #202028;
+
+    padding: 25px;
+
+    border-radius: 5px;
+}
+
+
+/* LABELS DES STATS */
+
+.tracker-stat > span {
+    display: block;
+
+    color: #777782;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   TOUS LES CHIFFRES IDENTIQUES
+========================================================= */
+
+.tracker-stat h2,
+.tracker-stat h2 span {
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0;
+
+    margin-top: 10px;
+}
+
+
+/* POURCENTAGE */
+
+.tracker-stat h2 span {
+    display: inline;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BAS DU TRACKER
+========================================================= */
+
+.tracker-bottom {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.tracker-panel {
+    background: #111116;
+
+    border:
+        1px solid #202028;
+
+    border-radius: 5px;
+
+    padding: 25px;
+
+    min-height: 220px;
+}
+
+.tracker-panel > h2 {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   MATCHS
+========================================================= */
+
+.match,
+.agent-stat {
+    padding: 15px;
+
+    background: #0b0b10;
+
+    color: #777;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   LIEN TRACKER
+========================================================= */
+
+.tracker-link {
+    color: white;
+
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+.tracker-link .profile-title {
+    transition: .2s ease;
+}
+
+.tracker-link:hover .profile-title {
+    color: #ff4655;
+
+    transform:
+        translateX(8px);
+}
+
+
+/* =========================================================
+   RESPONSIVE TRACKER
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .tracker-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .tracker-bottom {
+        grid-template-columns:
+            1fr;
+    }
+
+    .tracker-rank {
+        flex-direction: column;
+    }
+
+    .tracker-agent {
+        width: 220px;
+        height: 220px;
+
+        right: -20px;
+        top: -40px;
+    }
+
+    .tracker-header h1 {
+        font-size: 50px;
+    }
+}

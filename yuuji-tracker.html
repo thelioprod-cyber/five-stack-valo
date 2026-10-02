@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YUUJI // Tracker</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="tracker-page">
+
+    <a href="yuuji.html" class="tracker-back">
+        ← RETOUR À LA FICHE
+    </a>
+
+    <main class="tracker-container">
+
+        <!-- HEADER -->
+
+        <section class="tracker-header">
+
+            <p class="tracker-label">
+                VALORANT // PLAYER TRACKER
+            </p>
+
+            <h1>YUUJI</h1>
+
+            <p class="riot-id">
+                Yuuji#QLF
+            </p>
+
+            <img
+                src="../images/jett.png"
+                class="tracker-agent"
+                alt="Jett"
+            >
+
+        </section>
+
+
+        <!-- RANG -->
+
+        <section class="tracker-rank">
+
+            <div>
+                <span>RANG ACTUEL</span>
+
+                <h2 id="current-rank">
+                    CHARGEMENT...
+                </h2>
+            </div>
+
+            <div>
+                <span>RR</span>
+
+                <h2>
+                    <span id="current-rr">--</span>
+                    / 100
+                </h2>
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="tracker-stats">
+
+            <div class="tracker-stat">
+                <span>K/D</span>
+                <h2 id="kd">--</h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>WINRATE</span>
+                <h2>
+                    <span id="winrate">--</span>%
+                </h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>HEADSHOT</span>
+                <h2>
+                    <span id="headshot">--</span>%
+                </h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>VICTOIRES</span>
+                <h2 id="wins">--</h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>⚔️ KILLS</span>
+                <h2 id="kills">--</h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>💀 MORTS</span>
+                <h2 id="deaths">--</h2>
+            </div>
+
+            <div class="tracker-stat">
+                <span>🤝 ASSISTS</span>
+                <h2 id="assists">--</h2>
+            </div>
+
+        </section>
+
+
+        <!-- MATCHS + AGENTS -->
+
+        <section class="tracker-bottom">
+
+            <div class="tracker-panel">
+
+                <h2>DERNIERS MATCHS</h2>
+
+                <div id="matches-list">
+
+                    <div class="match">
+                        <span>
+                            Chargement des matchs...
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tracker-panel">
+
+                <h2>AGENTS LES + JOUÉS</h2>
+
+                <div id="agents-list">
+
+                    <div class="agent-stat">
+                        <span>
+                            Chargement...
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="tracker.js"></script>
+
+</body>
+
+</html>
